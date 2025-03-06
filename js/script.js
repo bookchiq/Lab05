@@ -12,6 +12,13 @@ do {
     } else {
         alert('One or both entries are invalid.');
     }
-    again = prompt('Run application again? (y or n)', 'y');
+    again = prompt('Run application again? (y or n)', 'y').toLowerCase();
+
+    console.log(again);
+
+    // Validate the again variable.
+    while (again !== 'y' && again !== 'n') {
+        again = prompt('Please enter y or n', 'y').toLowerCase();
+    }
 } while (again === 'y');
 console.log('Application has exited.');
